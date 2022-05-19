@@ -228,12 +228,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        release {
-            storeFile file('your_key_name.keystore')
-            storePassword System.Console.ReadLine("Enter Password :")
-            keyAlias 'your_key_alias'
-            keyPassword System.Console.ReadLine("Enter Alias Password :")
-        }
+        // release {
+        //     storeFile file('your_key_name.keystore')
+        //     storePassword System.Console().ReadLine("Enter Password :")
+        //     keyAlias 'your_key_alias'
+        //     keyPassword System.Console().ReadLine("Enter Alias Password :")
+        // }
     }
     buildTypes {
         debug {
@@ -245,7 +245,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            signingConfig signingConfigs.release
+            // signingConfig signingConfigs.release
         }
     }
 
